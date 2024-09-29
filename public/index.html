@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Course Recommendation System</title>
+</head>
+<body>
+    <header>
+        <div class="logo">CourseFinder</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls">
+            <button id="toggleTheme" class="theme-button">🌙</button>
+            <p id="usernameDisplay">Welcome, Hack the Hill 2024 user!</p>
+            <button id="logoutButton" class="logout-button">Logout</button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Discover Your Next Course!</h1>
+            <p>Explore a wide range of courses to enhance your skills and knowledge.</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search courses by title or tag" aria-label="Search courses">
+                <button id="filterButton" class="search-button">🔍 Search</button>
+            </div>
+        </section>
+        <section id="filters" class="filters">
+            <label for="categoryFilter">Category:</label>
+            <select id="categoryFilter" class="filter-select">
+                <option value="">All Categories</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Design">Design</option>
+                <option value="Business">Business</option>
+            </select>
+            <label for="sortOptions">Sort By:</label>
+            <select id="sortOptions" class="filter-select">
+                <option value="">Default</option>
+                <option value="rating">Rating</option>
+                <option value="date">Date Added</option>
+            </select>
+        </section>
+        <section id="coursesList" class="courses-list"></section>
+        <nav id="pagination" class="pagination"></nav>
+    </main>
+    <footer>
+        <p>&copy; 2024 CourseFinder. All Rights Reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
